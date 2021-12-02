@@ -1,0 +1,30 @@
+const films=[{
+    "id":4,
+    "image":"https://media.senscritique.com/media/000018727773/source_big/Papicha.jpg",
+    "titre":"Papicha",
+    "desciption":"Nedjma, une étudiante de 18 ans passionnée de mode, refuse de laisser les événements tragiques de la guerre civile algérienne l'empêcher de mener une vie normale et de sortir le soir avec son amie Wassila. Alors que le climat social devient plus conservateur, elle rejette les nouvelles interdictions imposées par les radicaux et décide de lutter pour sa liberté et son indépendance en organisant un défilé de mode.",
+    "dateSortie" :"09/09/2019",
+    "score":9
+  },{
+    "id":3,
+    "image":"https://fr.web.img6.acsta.net/pictures/210/207/21020779_20130718120418237.jpg",
+    "titre":"ROCK THE CASBAH",
+    "desciption":"C'est l'été à Tanger. Une famille se réunit sur trois jours dans la maison familiale suite au décès du père, pour se remémorer les souvenirs et partager sa perte, comme le veut la tradition musulmane. Il faut quitter les plages, les maillots de bain pour se vêtir de djellabas, réunir tout le monde et donner à la maison des allures d'enterrement. L'agitation est à son comble d'autant plus que cet homme n'a laissé derrière lui que des femmes.",
+    "dateSortie" :"",
+    "score":7
+  },{
+    "id":2,
+    "image":"https://cdn.futura-sciences.com/buildsv6/images/wide1920/6/5/2/652a7adb1b_98148_01-intro-773.jpg",
+    "titre":"monFilm",
+    "desciption":"",
+    "dateSortie" :"",
+    "score":4
+  },{
+    "id":1,
+    "image":"https://fr.web.img4.acsta.net/pictures/21/09/09/11/06/5284084.jpg",
+    "titre":"James Bond",
+    "desciption":"",
+    "dateSortie" :"",
+    "score":3
+  }]
+  module.exports =films;
