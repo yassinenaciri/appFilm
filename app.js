@@ -32,4 +32,4 @@ app.use('/api/users/',userRoute);
 app.use('/api/comments/',commentsRoute);
 
 
-app.listen(port)
+app.listen(process.env.PORT ||port)
