@@ -5,7 +5,7 @@ import Film from '../Interfaces/Film';
 import User from '../Interfaces/User';
 import { CookieService } from 'ngx-cookie-service';
 
-const backurl='/api/';
+const backurl='http://localhost:3000/api/';
 
 @Injectable({
   providedIn: 'root'
@@ -44,7 +44,7 @@ export class FilmService {
   }
 
   getFilmsFavoris=()=>{
-    const url = backurl+'films/g/'+this.cookieService.get("id"); 
+    const url = backurl+this.cookieService.get("id"); 
     return this.http.get(url).toPromise()
   }
 

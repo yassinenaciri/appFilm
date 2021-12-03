@@ -12,7 +12,7 @@ const port = 3000;
 const filmsRoute=require('./roots/filmsRoot');
 const commentsRoute=require('./roots/commentsRoot');
 const userRoute=require('./roots/userRoot');
-
+const filmsController =require('./controllers.js/filmsController')
 
 app.use(function(req, res, next) {
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -20,11 +20,13 @@ app.use(function(req, res, next) {
     res.setHeader("Access-Control-Allow-Methods" , "GET,POST,PATCH,PUT,DELETE,OPTIONS" );
     next();
 });
-app.use(express.static('./dist/angular'));
+/*app.use(express.static('./dist/angular'));
 app.get('*', (req, res)=> {
   const index = path.join(__dirname, '/', './dist/angular', 'index.html' );
   res.sendFile(index);
-});
+});*/
+
+
 
 
 app.use('/api/films/',filmsRoute);
@@ -32,4 +34,7 @@ app.use('/api/users/',userRoute);
 app.use('/api/comments/',commentsRoute);
 
 
+
+
 app.listen(process.env.PORT ||port)
+app.get("/api/:id",filmsController.getFilms)
