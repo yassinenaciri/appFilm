@@ -8,13 +8,12 @@ const findFilmById=(req,res)=>{
 }
 
 const getFilms =(req,res)=>{
-    idUser=url.parse(req.url,true).query.userId;
+    idUser=req.url.query.userId;
     userModel.findById(idUser).then(user=>{
         filmModel.find({ "_id": { $in: user.favoris } }).then(result=>{
             res.json(result);
         }).catch(err=>res.status(400));
     })
-    
 }
 
 
