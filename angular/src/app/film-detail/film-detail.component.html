@@ -1,0 +1,37 @@
+<div>
+  <div class="detailComp">
+    <img class="first" src="{{ service.getImageFromServer(film.poster_path) }}" />
+
+    <div class="second">
+      <p class="title">
+        {{ film.title }} <span>( {{ film.original_title }} )</span>
+      </p>
+      <div class="rate_date">
+        <p class="rating" *ngIf="film != null">{{ film.vote_average }}/10</p>
+        <p class="date" *ngIf="film != null">{{ film.release_date }}</p>
+      </div>
+      <button *ngIf="isAuthenticated()" (click)="ajouterAuxFavoris()">ajouter aux favoris</button>
+      <p class="desc" *ngIf="film != null">{{ film.overview }}</p>
+    </div>
+  </div>
+  <a>comments</a>
+  <div style="margin-top: 10%">
+    <div *ngIf="isAuthenticated()" class="form-group">
+      <textarea class="form-control" [(ngModel)]="comment" type="text" placeholder="Leave a comment"></textarea>
+    </div>
+    <div *ngIf="isAuthenticated()" class="form-group">
+      <button type="submit" (click)="addComment()" class="btn btn-success">Post Comment</button>
+    </div>
+
+    <div class="comments" *ngIf="comments !== undefined && comments.length > 0">
+      <ul>
+        <li *ngFor="let post of comments; let i = index">
+          <div class="col-12 col-sm-12 comment-container">
+            <p>{{ post.message }}</p>
+            <div class="actions"><span> </span> <span class="divider"></span> <span class="divider"> </span></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+
+<div [routerLink]="['movie/',film.id]" routerLinkActive="active" class="card" style="width:300px; margin: 10px;" >
+    <img class="card-img-top" [src]="getImageFromServer()"  width="10" height="400"  alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">{{film.original_title}}</h4>
+    </div>
+</div>
