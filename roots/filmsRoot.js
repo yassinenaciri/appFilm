@@ -4,7 +4,7 @@ const router=express.Router();
 const filmsController =require('../controllers.js/filmsController')
 
 
-router.get('', filmsController.getFilms);
+router.get("g/:id", filmsController.getFilms);
 
 router.get(':id',filmsController.findFilmById);
 
