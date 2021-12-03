@@ -20,11 +20,13 @@ app.use(function(req, res, next) {
     res.setHeader("Access-Control-Allow-Methods" , "GET,POST,PATCH,PUT,DELETE,OPTIONS" );
     next();
 });
-/*app.use(express.static('./dist/angular'));
+
+
+app.use(express.static('./dist/angular'));
 app.get('*', (req, res)=> {
   const index = path.join(__dirname, '/', './dist/angular', 'index.html' );
   res.sendFile(index);
-});*/
+});
 
 
 
@@ -37,4 +39,6 @@ app.use('/api/comments/',commentsRoute);
 
 
 app.listen(process.env.PORT ||port)
+
+//favoris
 app.get("/api/:id",filmsController.getFilms)
